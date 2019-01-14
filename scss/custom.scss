@@ -1,0 +1,128 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    .main {
+        a{
+            text-decoration: none;
+            outline: none;
+        }
+
+        nav {
+            div {
+                img[alt~=logo] {
+                    height: 28px;
+                    ;
+                }
+            }
+        }
+
+        section {
+            div {
+                h1 {
+                    padding: 10px;
+                }
+            }
+
+            div {
+                .checklist {
+                    display: flex;
+                    flex-direction: column;
+
+                    .item {
+                        display: flex;
+                        justify-content: space-between;
+                        background: #E8E8E8;
+                        border-radius: 12px;
+                        padding: 10px;
+                        margin-bottom: 5px;
+
+                        .item-left {
+                            flex: 1;
+                            font-size: 1.3em;
+
+                            * {
+                                vertical-align: middle;
+                            }
+
+                            input {
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 50%;
+                            }
+
+                            label {
+                                word-break: break-all;
+                                margin: 0;
+                                margin-left: 5px;
+                            }
+
+                        }
+
+                        .item-right-sm {
+                            padding-left: 10px;
+                        }
+
+                        .item-right-lg {
+                            flex: 0.1;
+                            justify-content: space-around;
+                            padding-left: 10px;
+                            display: none;
+
+                            button {
+                                width: 75px;
+                            }
+
+                            :last-child {
+                                margin-left: 10px;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .add-task {
+                padding: 20px 0;
+                .add-task-content {
+                    display: inline-block;
+
+                    * {
+                        vertical-align: middle;
+                    }
+
+                    label {
+                        font-size: 22px;
+                        margin: 0px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+
+        .myModal{
+            opacity: 100;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    section {
+        div {
+            .checklist {
+                .item {
+                    .item-left {
+                        flex: 0.9 !important;
+                    }
+
+                    .item-right-sm {
+                        display: none;
+                    }
+
+                    .item-right-lg {
+                        display: flex !important;
+                    }
+                }
+            }
+        }
+    }
+}
