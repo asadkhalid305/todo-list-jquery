@@ -10449,6 +10449,10 @@ body .main section div .checklist .item .item-right-sm {
   margin: auto 0;
 }
 
+body .main section div .checklist .item .item-right-sm .btnOptionPop {
+  position: relative;
+}
+
 body .main section div .checklist .item .item-right-lg {
   -webkit-box-flex: 0.1;
       -ms-flex: 0.1;
@@ -10485,8 +10489,8 @@ body .main section .add-task .add-task-content label {
   margin-left: 5px;
 }
 
-body .main .myModal {
-  opacity: 100;
+body .main .item-right-sm-options button {
+  width: 100px;
 }
 
 @media (min-width: 576px) {

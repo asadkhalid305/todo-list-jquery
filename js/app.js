@@ -4,7 +4,6 @@ $(function () {
     $('#addTaskAlert').hide();
     $('#editTaskAlert').hide();
 
-
     // variables decleared
     var taskCount = 1;
     var tasks = ['item1'];
@@ -47,6 +46,10 @@ $(function () {
 
                 //show alert success
                 $('#addTaskAlert').show();
+
+                setTimeout(function () {
+                    $('#addTaskAlert').hide();
+                }, 800);
             }
 
         } else {
@@ -73,6 +76,9 @@ $(function () {
             //show alert success
             $('#editTaskAlert').show();
 
+            setTimeout(function () {
+                $('#editTaskAlert').hide();
+            }, 800);
         }
     }
 
@@ -83,29 +89,22 @@ $(function () {
     });
 
     //initialize and set content of option popover
-    $('#btnPopover').popover({
-        tabIndex: 0,
+    $('.btnOptionPop').popover({
+        tabindex: 0,
         placement: 'left',
-        trigger: 'hover',
+        trigger: 'focus',
         title: 'Options',
         container: 'body',
         html: true,
-        content: '<div class=""><button type="button" class="btn btn-success btnEditPop" data-toggle="modal" data-target="#editModal">Edit</button><button type="button" class="btn btn-danger" id="btnDeletePop">Delete</button></div>'
+        content: '<div class=""><button type="button" class="btn btn-success btnEditPop" data-toggle="modal" data-target="#editModal">Edit</button><button type="button" class="btn btn-danger btnDeletePop" id="btnDeletePop">Delete</button></div>'
     });
 
     //global work ends
 
-
-    //Edit and Add Task done button click and enter event start
+    //Add, delete and edit on large screen start
     $('#btnAddTask').click(
         function () {
             clickAndEnterAdd();
-        }
-    );
-
-    $('#btnEditTask').click(
-        function () {
-            clickAndEnterEdit();
         }
     );
 
@@ -117,18 +116,6 @@ $(function () {
         }
     );
 
-    $('#editInput').keypress(
-        function (e) {
-            if (e.which === 13) {
-                clickAndEnterEdit();
-            }
-        }
-    );
-    //Edit and Add Task done button click and enter event end
-
-
-    //delete buttons start
-    //delete button from large screen
     $('.btnDelete').click(
         function () {
             var itemId = $(this).parent().parent().attr('id');
@@ -141,14 +128,36 @@ $(function () {
         }
     );
 
-    //delete button from small screen
-    $('#btnPopover').on('shown.bs.popover', function () {
+    //works for both screens
+    $('#btnEditTask').click(
+        function () {
+            clickAndEnterEdit();
+        }
+    );
+
+    $('#editInput').keypress(
+        function (e) {
+            if (e.which === 13) {
+                clickAndEnterEdit();
+            }
+        }
+    );
+    //Add, delete and edit on large screen end
+
+    //delete on small screen starts    
+    $('.btnOptionPop').on('shown.bs.popover', function () {
         // set what happens when user clicks on the button
         $("#btnDeletePop").on('click', function () {
             var temp = tasks.indexOf(editItemId);
             tasks.splice(temp, 1);
             $('#' + editItemId).remove();
         });
+
+        //css for options popover
+        $('.btnEditPop, .btnDeletePop').css({
+            'width': '100%',
+            'margin': '5px 0'
+        });
     });
-    //delete buttons end 
+    //delete on small screen ends 
 });
