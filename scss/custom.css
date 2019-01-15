@@ -10446,6 +10446,7 @@ body .main section div .checklist .item .item-left label {
 
 body .main section div .checklist .item .item-right-sm {
   padding-left: 10px;
+  margin: auto 0;
 }
 
 body .main section div .checklist .item .item-right-lg {
