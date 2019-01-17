@@ -5,11 +5,52 @@ body {
             text-decoration: none;
             outline: none;
         }
+        input {
+            outline: none;
+            border: none;
+        }
         nav {
             div {
                 img[alt~=logo] {
                     height: 28px;
                     ;
+                }
+                .menuExt {
+                    background-color: #58c2ec;
+                    color: white;
+                    padding: 30px 50px 0 15px;
+                    line-height: 3em;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: -2500px;
+                    top: 0px;
+                    z-index: 100;
+                    p {
+                        &:first-child {
+                            font-weight: 600;
+                            font-size: 1.2em;
+                        }
+                        a {
+                            color: white;
+                        }
+                    }
+                    div {
+                        border-bottom: 1px solid rgba(54, 57, 70, 0.3);
+                        &:nth-child(2) {
+                            border-bottom: 2px solid rgba(54, 57, 70, 1);
+                        }
+                    }
+                }
+                #searchBox {
+                    border: 1px solid rgba(54, 57, 70, 1);
+                    border-radius: 20px;
+                    padding: 3px 12px;
+                    display: none;
+                    input {
+                        padding-left: 15px; 
+                        background-color: transparent;
+                    }
                 }
             }
         }
@@ -50,8 +91,7 @@ body {
                         .item-right-sm {
                             padding-left: 10px;
                             margin: auto 0;
-
-                            .btnOptionPop{
+                            .btnOptionPop {
                                 position: relative;
                             }
                         }
@@ -85,13 +125,11 @@ body {
                 }
             }
         }
-
-        .item-right-sm-options{
-            button{
+        .item-right-sm-options {
+            button {
                 width: 100px;
             }
         }
-
     }
 }
 

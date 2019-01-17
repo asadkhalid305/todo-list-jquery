@@ -7,6 +7,8 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Todo List</title>
    <link rel="stylesheet" href="scss/custom.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous">
    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
             crossorigin="anonymous"> -->
 </head>
@@ -14,17 +16,36 @@
 <body>
    <div class="main">
       <nav>
-         <div class="d-flex justify-content-between flex-wrap pt-4 pb-4
-               container">
-            <div class="">
+         <div class="d-flex justify-content-between flex-wrap pt-4 pb-4 container">
+            <div class="menuExt" id="menuList">
+               <p><a href="#">Navigation</a></p>
+               <div></div>
+               <p><a href="#">All Tasks</a></p>
+               <div></div>
+               <p><a href="#">Important</a></p>
+               <div></div>
+               <p><a href="#">Recently Edited</a></p>
+               <div></div>
+               <p><a href="#">Recently Deleted</a></p>
+               <div></div>
+               <p id="navMenuExtClose">Close</p>
+            </div>
+            <div class="menuLogo" id="showMenuExt">
                <img src="img/menu.png" alt="menu-icon">
             </div>
-            <div class="">
+            <div id="mainLogo">
                <img src="img/logo.png" alt="logo">
             </div>
-            <div class="">
+
+            <div id="searchBox">
+               <span class="fa fa-search"></span>
+               <input type="text" name="" id="searchBoxInput" placeholder="Search task...">
+            </div>
+
+            <div id="searchLogo">
                <img src="img/search.png" alt="search-icon">
             </div>
+
          </div>
       </nav>
 

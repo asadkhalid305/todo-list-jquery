@@ -160,4 +160,52 @@ $(function () {
         });
     });
     //delete on small screen ends 
+
+
+    //nan menu show and hide start
+    $('#showMenuExt').click(
+        function () {
+            $('#menuList').css({
+                'left': '0',
+                'transitionDuration': '2s',
+            });
+
+            //it is working
+            // $("body").not($("#menuList"))
+            //     .css({
+            //         'transitionDuration': '1s',
+            //         'backgroundColor': 'rgb(0,0,0,0.6)',
+            //         // 'opacity': '0.5'
+            //     });
+        }
+    );
+
+    $('#menuList > p').click(
+        function () {
+            console.log('hello');
+            $('#menuList').css({
+                'left': '-2500px',
+                'transitionDuration': '1s'
+            });
+        }
+    );
+    //nan menu show and hide end
+
+    //search bar show and hide start
+
+    $('#searchLogo').click(
+        function () {
+            $('#searchBox').css({
+                'transitionDuration': '5s',
+                'display': 'block'
+            });
+
+            $('#mainLogo, #searchLogo').css({
+                'transitionDuration': '5s',
+                'display': 'none'
+            })
+        }
+    )
+
+    //search bar show and hide end
 });
