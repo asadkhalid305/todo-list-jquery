@@ -134,6 +134,17 @@ body {
 }
 
 @include media-breakpoint-up(sm) {
+    nav{
+        div{
+            #searchLogo{
+                display: none;
+            }
+            #searchBox{
+                display: block !important;
+            }
+        }
+    }
+
     section {
         div {
             .checklist {

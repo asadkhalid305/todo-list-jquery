@@ -10541,6 +10541,12 @@ body .main .item-right-sm-options button {
 }
 
 @media (min-width: 576px) {
+  nav div #searchLogo {
+    display: none;
+  }
+  nav div #searchBox {
+    display: block !important;
+  }
   section div .checklist .item .item-left {
     -webkit-box-flex: 0.9 !important;
         -ms-flex: 0.9 !important;
