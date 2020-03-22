@@ -165,10 +165,10 @@ $(function () {
     //nan menu show and hide start
     $('#showMenuExt').click(
         function () {
-            $('#menuList').css({
-                'left': '0',
-                'transitionDuration': '2s',
-            });
+            // $('#menuList').css({
+            //     'left': '0',
+            //     'transitionDuration': '2s',
+            // });
 
             //it is working
             // $("body").not($("#menuList"))
@@ -182,7 +182,6 @@ $(function () {
 
     $('#menuList > p').click(
         function () {
-            console.log('hello');
             $('#menuList').css({
                 'left': '-2500px',
                 'transitionDuration': '1s'
